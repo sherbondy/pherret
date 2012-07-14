@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E40568915B238E3007E8B67 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E40568715B238E3007E8B67 /* RootViewController.m */; };
+		3E40568A15B238E3007E8B67 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E40568815B238E3007E8B67 /* RootViewController.xib */; };
 		3EF2558A15B2251100002259 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558915B2251100002259 /* UIKit.framework */; };
 		3EF2558C15B2251100002259 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558B15B2251100002259 /* Foundation.framework */; };
 		3EF2558E15B2251100002259 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558D15B2251100002259 /* CoreGraphics.framework */; };
@@ -25,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E40568615B238E3007E8B67 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		3E40568715B238E3007E8B67 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		3E40568815B238E3007E8B67 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		3EF2558515B2251100002259 /* pherret.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pherret.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EF2558915B2251100002259 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3EF2558B15B2251100002259 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -114,10 +119,14 @@
 		3EF2558F15B2251100002259 /* pherret */ = {
 			isa = PBXGroup;
 			children = (
+				3EFD3D5D15B2338700B28496 /* xibs */,
 				3EFD3D5015B2318300B28496 /* external */,
 				3EF2559815B2251100002259 /* PHAppDelegate.h */,
 				3EF2559915B2251100002259 /* PHAppDelegate.m */,
 				3EF2559015B2251100002259 /* Supporting Files */,
+				3E40568615B238E3007E8B67 /* RootViewController.h */,
+				3E40568715B238E3007E8B67 /* RootViewController.m */,
+				3E40568815B238E3007E8B67 /* RootViewController.xib */,
 			);
 			path = pherret;
 			sourceTree = "<group>";
@@ -170,6 +179,13 @@
 				3EFD3D5A15B2318B00B28496 /* AviarySDKResources.bundle */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		3EFD3D5D15B2338700B28496 /* xibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = xibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +243,7 @@
 			files = (
 				3EF2559415B2251100002259 /* InfoPlist.strings in Resources */,
 				3EFD3D5C15B2318B00B28496 /* AviarySDKResources.bundle in Resources */,
+				3E40568A15B238E3007E8B67 /* RootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +273,7 @@
 			files = (
 				3EF2559615B2251100002259 /* main.m in Sources */,
 				3EF2559A15B2251100002259 /* PHAppDelegate.m in Sources */,
+				3E40568915B238E3007E8B67 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +344,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pherret/pherret-Prefix.pch";
 				INFOPLIST_FILE = "pherret/pherret-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/aviary/AviarySDK\"",
@@ -342,6 +361,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pherret/pherret-Prefix.pch";
 				INFOPLIST_FILE = "pherret/pherret-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/aviary/AviarySDK\"",

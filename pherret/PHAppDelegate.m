@@ -8,6 +8,7 @@
 
 #import "PHAppDelegate.h"
 #import "AFPhotoEditorController.h"
+#import "RootViewController.h"
 #import <ObjectiveFlickr.h>
 
 @implementation PHAppDelegate
@@ -16,8 +17,13 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = [UIColor blueColor];
     [self.window makeKeyAndVisible];
+    
+    UIViewController *rootVC = [[UIViewController alloc] initWithNibName:nil bundle:nil];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:rootVC];
+    self.window.rootViewController = navController;
+    
     return YES;
 }
 
