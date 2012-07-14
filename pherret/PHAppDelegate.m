@@ -7,6 +7,7 @@
 //
 
 #import "PHAppDelegate.h"
+#import "AFPhotoEditorController.h"
 #import <ObjectiveFlickr.h>
 
 @implementation PHAppDelegate

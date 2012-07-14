@@ -1,0 +1,3 @@
+[submodule "aviary"]
+	path = aviary
+	url = https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS

@@ -1,597 +1,378 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>3EF2557A15B2251100002259</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3EF2558F15B2251100002259</string>
-				<string>3EF2558815B2251100002259</string>
-				<string>3EF2558615B2251100002259</string>
-				<string>4F09B79AAA2D4DC3B5B052AD</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3EF2557C15B2251100002259</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>CLASSPREFIX</key>
-				<string>PH</string>
-				<key>LastUpgradeCheck</key>
-				<string>0450</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Ethan Sherbondy</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>3EF2557F15B2251100002259</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>3EF2557A15B2251100002259</string>
-			<key>productRefGroup</key>
-			<string>3EF2558615B2251100002259</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>3EF2558415B2251100002259</string>
-			</array>
-		</dict>
-		<key>3EF2557F15B2251100002259</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>3EF2559B15B2251100002259</string>
-				<string>3EF2559C15B2251100002259</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>3EF2558115B2251100002259</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>3EF2559615B2251100002259</string>
-				<string>3EF2559A15B2251100002259</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>3EF2558215B2251100002259</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>3EF2558A15B2251100002259</string>
-				<string>3EF2558C15B2251100002259</string>
-				<string>3EF2558E15B2251100002259</string>
-				<string>68266BDE58364E018239FD66</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>3EF2558315B2251100002259</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>3EF2559415B2251100002259</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>3EF2558415B2251100002259</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>3EF2559D15B2251100002259</string>
-			<key>buildPhases</key>
-			<array>
-				<string>3EF2558115B2251100002259</string>
-				<string>3EF2558215B2251100002259</string>
-				<string>3EF2558315B2251100002259</string>
-				<string>442C8009F97640759094671D</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>pherret</string>
-			<key>productName</key>
-			<string>pherret</string>
-			<key>productReference</key>
-			<string>3EF2558515B2251100002259</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>3EF2558515B2251100002259</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>pherret.app</string>
-			<key>path</key>
-			<string>pherret.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>3EF2558615B2251100002259</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3EF2558515B2251100002259</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3EF2558815B2251100002259</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3EF2558915B2251100002259</string>
-				<string>3EF2558B15B2251100002259</string>
-				<string>3EF2558D15B2251100002259</string>
-				<string>50A97EA835FC4757BB6B783B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3EF2558915B2251100002259</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>3EF2558A15B2251100002259</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3EF2558915B2251100002259</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3EF2558B15B2251100002259</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>3EF2558C15B2251100002259</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3EF2558B15B2251100002259</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3EF2558D15B2251100002259</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>3EF2558E15B2251100002259</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3EF2558D15B2251100002259</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3EF2558F15B2251100002259</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3EF2559815B2251100002259</string>
-				<string>3EF2559915B2251100002259</string>
-				<string>3EF2559015B2251100002259</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>pherret</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3EF2559015B2251100002259</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3EF2559115B2251100002259</string>
-				<string>3EF2559215B2251100002259</string>
-				<string>3EF2559515B2251100002259</string>
-				<string>3EF2559715B2251100002259</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3EF2559115B2251100002259</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>pherret-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3EF2559215B2251100002259</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3EF2559315B2251100002259</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3EF2559315B2251100002259</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3EF2559415B2251100002259</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3EF2559215B2251100002259</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3EF2559515B2251100002259</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3EF2559615B2251100002259</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3EF2559515B2251100002259</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3EF2559715B2251100002259</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>pherret-Prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3EF2559815B2251100002259</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>PHAppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3EF2559915B2251100002259</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>PHAppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3EF2559A15B2251100002259</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3EF2559915B2251100002259</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3EF2559B15B2251100002259</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>6.0</string>
-				<key>PROVISIONING_PROFILE[sdk=iphoneos*]</key>
-				<string></string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>3EF2559C15B2251100002259</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>6.0</string>
-				<key>OTHER_CFLAGS</key>
-				<string>-DNS_BLOCK_ASSERTIONS=1</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>3EF2559D15B2251100002259</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>3EF2559E15B2251100002259</string>
-				<string>3EF2559F15B2251100002259</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>3EF2559E15B2251100002259</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>4F09B79AAA2D4DC3B5B052AD</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>pherret/pherret-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>pherret/pherret-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>3EF2559F15B2251100002259</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>4F09B79AAA2D4DC3B5B052AD</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>pherret/pherret-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>pherret/pherret-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>442C8009F97640759094671D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-resources.sh"
-</string>
-		</dict>
-		<key>4F09B79AAA2D4DC3B5B052AD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Pods.xcconfig</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>50A97EA835FC4757BB6B783B</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libPods.a</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>68266BDE58364E018239FD66</key>
-		<dict>
-			<key>fileRef</key>
-			<string>50A97EA835FC4757BB6B783B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>3EF2557C15B2251100002259</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3EF2558A15B2251100002259 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558915B2251100002259 /* UIKit.framework */; };
+		3EF2558C15B2251100002259 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558B15B2251100002259 /* Foundation.framework */; };
+		3EF2558E15B2251100002259 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558D15B2251100002259 /* CoreGraphics.framework */; };
+		3EF2559415B2251100002259 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3EF2559215B2251100002259 /* InfoPlist.strings */; };
+		3EF2559615B2251100002259 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF2559515B2251100002259 /* main.m */; };
+		3EF2559A15B2251100002259 /* PHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF2559915B2251100002259 /* PHAppDelegate.m */; };
+		3EFD3D4015B2300400B28496 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFD3D3F15B2300400B28496 /* QuartzCore.framework */; };
+		3EFD3D4315B2300B00B28496 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFD3D4215B2300B00B28496 /* Accelerate.framework */; };
+		3EFD3D4515B2301400B28496 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFD3D4415B2301400B28496 /* StoreKit.framework */; };
+		3EFD3D4715B2301C00B28496 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFD3D4615B2301C00B28496 /* libz.1.2.5.dylib */; };
+		3EFD3D4915B2302500B28496 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFD3D4815B2302500B28496 /* libsqlite3.0.dylib */; };
+		3EFD3D4B15B2302A00B28496 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFD3D4A15B2302A00B28496 /* CoreData.framework */; };
+		3EFD3D5B15B2318B00B28496 /* libAviarySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFD3D5815B2318B00B28496 /* libAviarySDK.a */; };
+		3EFD3D5C15B2318B00B28496 /* AviarySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3EFD3D5A15B2318B00B28496 /* AviarySDKResources.bundle */; };
+		68266BDE58364E018239FD66 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A97EA835FC4757BB6B783B /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3EF2558515B2251100002259 /* pherret.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pherret.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EF2558915B2251100002259 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3EF2558B15B2251100002259 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3EF2558D15B2251100002259 /* CoreGraphics.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3EF2559115B2251100002259 /* pherret-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "pherret-Info.plist"; sourceTree = "<group>"; };
+		3EF2559315B2251100002259 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3EF2559515B2251100002259 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3EF2559715B2251100002259 /* pherret-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pherret-Prefix.pch"; sourceTree = "<group>"; };
+		3EF2559815B2251100002259 /* PHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PHAppDelegate.h; sourceTree = "<group>"; };
+		3EF2559915B2251100002259 /* PHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PHAppDelegate.m; sourceTree = "<group>"; };
+		3EFD3D3F15B2300400B28496 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3EFD3D4215B2300B00B28496 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		3EFD3D4415B2301400B28496 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		3EFD3D4615B2301C00B28496 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		3EFD3D4815B2302500B28496 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		3EFD3D4A15B2302A00B28496 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3EFD3D4C15B230FF00B28496 /* libAviarySDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAviarySDK.a; path = aviary/AviarySDK/libAviarySDK.a; sourceTree = "<group>"; };
+		3EFD3D5315B2318B00B28496 /* AFPhotoEditorContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorContext.h; sourceTree = "<group>"; };
+		3EFD3D5415B2318B00B28496 /* AFPhotoEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorController.h; sourceTree = "<group>"; };
+		3EFD3D5515B2318B00B28496 /* AFPhotoEditorControllerOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorControllerOptions.h; sourceTree = "<group>"; };
+		3EFD3D5615B2318B00B28496 /* AFPhotoEditorSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorSession.h; sourceTree = "<group>"; };
+		3EFD3D5715B2318B00B28496 /* AFPhotoEditorStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorStyle.h; sourceTree = "<group>"; };
+		3EFD3D5815B2318B00B28496 /* libAviarySDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAviarySDK.a; sourceTree = "<group>"; };
+		3EFD3D5A15B2318B00B28496 /* AviarySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AviarySDKResources.bundle; sourceTree = "<group>"; };
+		4F09B79AAA2D4DC3B5B052AD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		50A97EA835FC4757BB6B783B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EF2558215B2251100002259 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EFD3D4B15B2302A00B28496 /* CoreData.framework in Frameworks */,
+				3EFD3D4915B2302500B28496 /* libsqlite3.0.dylib in Frameworks */,
+				3EFD3D4715B2301C00B28496 /* libz.1.2.5.dylib in Frameworks */,
+				3EFD3D4515B2301400B28496 /* StoreKit.framework in Frameworks */,
+				3EFD3D4315B2300B00B28496 /* Accelerate.framework in Frameworks */,
+				3EFD3D4015B2300400B28496 /* QuartzCore.framework in Frameworks */,
+				3EF2558A15B2251100002259 /* UIKit.framework in Frameworks */,
+				3EF2558C15B2251100002259 /* Foundation.framework in Frameworks */,
+				3EF2558E15B2251100002259 /* CoreGraphics.framework in Frameworks */,
+				68266BDE58364E018239FD66 /* libPods.a in Frameworks */,
+				3EFD3D5B15B2318B00B28496 /* libAviarySDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3EF2557A15B2251100002259 = {
+			isa = PBXGroup;
+			children = (
+				3EF2558F15B2251100002259 /* pherret */,
+				3EF2558815B2251100002259 /* Frameworks */,
+				3EF2558615B2251100002259 /* Products */,
+				4F09B79AAA2D4DC3B5B052AD /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		3EF2558615B2251100002259 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EF2558515B2251100002259 /* pherret.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3EF2558815B2251100002259 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EFD3D4C15B230FF00B28496 /* libAviarySDK.a */,
+				3EFD3D4815B2302500B28496 /* libsqlite3.0.dylib */,
+				3EFD3D4615B2301C00B28496 /* libz.1.2.5.dylib */,
+				3EFD3D4A15B2302A00B28496 /* CoreData.framework */,
+				3EFD3D4415B2301400B28496 /* StoreKit.framework */,
+				3EFD3D4215B2300B00B28496 /* Accelerate.framework */,
+				3EFD3D3F15B2300400B28496 /* QuartzCore.framework */,
+				3EF2558915B2251100002259 /* UIKit.framework */,
+				3EF2558B15B2251100002259 /* Foundation.framework */,
+				3EF2558D15B2251100002259 /* CoreGraphics.framework */,
+				50A97EA835FC4757BB6B783B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3EF2558F15B2251100002259 /* pherret */ = {
+			isa = PBXGroup;
+			children = (
+				3EFD3D5015B2318300B28496 /* external */,
+				3EF2559815B2251100002259 /* PHAppDelegate.h */,
+				3EF2559915B2251100002259 /* PHAppDelegate.m */,
+				3EF2559015B2251100002259 /* Supporting Files */,
+			);
+			path = pherret;
+			sourceTree = "<group>";
+		};
+		3EF2559015B2251100002259 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3EF2559115B2251100002259 /* pherret-Info.plist */,
+				3EF2559215B2251100002259 /* InfoPlist.strings */,
+				3EF2559515B2251100002259 /* main.m */,
+				3EF2559715B2251100002259 /* pherret-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3EFD3D5015B2318300B28496 /* external */ = {
+			isa = PBXGroup;
+			children = (
+				3EFD3D5115B2318B00B28496 /* AviarySDK */,
+			);
+			name = external;
+			sourceTree = "<group>";
+		};
+		3EFD3D5115B2318B00B28496 /* AviarySDK */ = {
+			isa = PBXGroup;
+			children = (
+				3EFD3D5215B2318B00B28496 /* Headers */,
+				3EFD3D5815B2318B00B28496 /* libAviarySDK.a */,
+				3EFD3D5915B2318B00B28496 /* Resources */,
+			);
+			name = AviarySDK;
+			path = aviary/AviarySDK;
+			sourceTree = SOURCE_ROOT;
+		};
+		3EFD3D5215B2318B00B28496 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				3EFD3D5315B2318B00B28496 /* AFPhotoEditorContext.h */,
+				3EFD3D5415B2318B00B28496 /* AFPhotoEditorController.h */,
+				3EFD3D5515B2318B00B28496 /* AFPhotoEditorControllerOptions.h */,
+				3EFD3D5615B2318B00B28496 /* AFPhotoEditorSession.h */,
+				3EFD3D5715B2318B00B28496 /* AFPhotoEditorStyle.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		3EFD3D5915B2318B00B28496 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3EFD3D5A15B2318B00B28496 /* AviarySDKResources.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3EF2558415B2251100002259 /* pherret */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EF2559D15B2251100002259 /* Build configuration list for PBXNativeTarget "pherret" */;
+			buildPhases = (
+				3EF2558115B2251100002259 /* Sources */,
+				3EF2558215B2251100002259 /* Frameworks */,
+				3EF2558315B2251100002259 /* Resources */,
+				442C8009F97640759094671D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pherret;
+			productName = pherret;
+			productReference = 3EF2558515B2251100002259 /* pherret.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3EF2557C15B2251100002259 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PH;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Ethan Sherbondy";
+			};
+			buildConfigurationList = 3EF2557F15B2251100002259 /* Build configuration list for PBXProject "pherret" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3EF2557A15B2251100002259;
+			productRefGroup = 3EF2558615B2251100002259 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3EF2558415B2251100002259 /* pherret */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3EF2558315B2251100002259 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EF2559415B2251100002259 /* InfoPlist.strings in Resources */,
+				3EFD3D5C15B2318B00B28496 /* AviarySDKResources.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		442C8009F97640759094671D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EF2558115B2251100002259 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EF2559615B2251100002259 /* main.m in Sources */,
+				3EF2559A15B2251100002259 /* PHAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3EF2559215B2251100002259 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EF2559315B2251100002259 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3EF2559B15B2251100002259 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3EF2559C15B2251100002259 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3EF2559E15B2251100002259 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F09B79AAA2D4DC3B5B052AD /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pherret/pherret-Prefix.pch";
+				INFOPLIST_FILE = "pherret/pherret-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/aviary/AviarySDK\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3EF2559F15B2251100002259 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F09B79AAA2D4DC3B5B052AD /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pherret/pherret-Prefix.pch";
+				INFOPLIST_FILE = "pherret/pherret-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/aviary/AviarySDK\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3EF2557F15B2251100002259 /* Build configuration list for PBXProject "pherret" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EF2559B15B2251100002259 /* Debug */,
+				3EF2559C15B2251100002259 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EF2559D15B2251100002259 /* Build configuration list for PBXNativeTarget "pherret" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EF2559E15B2251100002259 /* Debug */,
+				3EF2559F15B2251100002259 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3EF2557C15B2251100002259 /* Project object */;
+}
