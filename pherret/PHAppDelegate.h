@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 static NSString *PHShouldUpdateAuthInfoNotification = @"PHShouldUpdateAuthInfoNotification";
+static NSString *kFlickrGroupID                     = @"1992007@N24";
 static NSString *PHCallbackURLBaseString            = @"pherret://auth";
 
 @class OFFlickrAPIContext;
@@ -27,6 +28,7 @@ static NSString *PHCallbackURLBaseString            = @"pherret://auth";
 @property (strong, nonatomic)   UIWindow *window;
 @property (nonatomic, readonly) OFFlickrAPIContext *flickrContext;
 @property (nonatomic, retain)   NSString *flickrUserName;
+@property (nonatomic, retain)   NSString *flickrUserNSID;
 @property (nonatomic, readonly) BOOL isLoggedIn;
 @property (nonatomic, readonly) UINavigationController *navController;
 

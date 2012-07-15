@@ -2,7 +2,7 @@
     "data":{
                "tasks":[
                         {"name":"Task 1", "id":0, "photos":[
-                                                   {"id":0, "ownerFlickrID":"9656853@N08", "geolocation":{"latitude":0, "longitude":0}, "task_id":0}]},
+                                                   {"id":"7574193422", "ownerFlickrID":"9656853@N08", "geolocation":{"latitude":0, "longitude":0}, "task_id":0}]},
                         {"name":"Task 2", "id":1, "photos": []},
                         {"name":"Task 3", "id":2, "photos": []},
                         {"name":"Task 4", "id":3, "photos": []}

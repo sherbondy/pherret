@@ -20,7 +20,6 @@ static NSString *kStoredAuthTokenSecretKeyName      = @"FlickrOAuthTokenSecret";
 static NSString *kGetAccessTokenStep                = @"kGetAccessTokenStep";
 static NSString *kCheckTokenStep                    = @"kCheckTokenStep";
 
-
 @implementation PHAppDelegate
 
 @synthesize flickrUserName = _flickrUserName;
@@ -130,7 +129,17 @@ static NSString *kCheckTokenStep                    = @"kCheckTokenStep";
 }
 
 - (BOOL)isLoggedIn {
-    return [[PHAppDelegate sharedDelegate].flickrContext.OAuthToken length] > 0;
+    return [self.flickrContext.OAuthToken length] > 0;
+}
+
+- (NSString *)flickrUserNSID {
+    if (!_flickrUserNSID) {
+        NSString *candidateNSID = [[NSUserDefaults standardUserDefaults] objectForKey:@"flickerUserNSID"];
+        if (candidateNSID){
+            _flickrUserNSID = candidateNSID;
+        }
+    }
+    return _flickrUserNSID;
 }
 
 #pragma mark OFFlickrAPIRequest delegate methods
@@ -138,6 +147,8 @@ static NSString *kCheckTokenStep                    = @"kCheckTokenStep";
 {
     [self setAndStoreFlickrAuthToken:inAccessToken secret:inSecret];
     self.flickrUserName = inUserName;
+    _flickrUserNSID     = [inNSID stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [[NSUserDefaults standardUserDefaults] setObject:_flickrUserNSID forKey:@"flickerUserNSID"];
     
 	[[NSNotificationCenter defaultCenter] postNotificationName:PHShouldUpdateAuthInfoNotification object:self];
     [self flickrRequest].sessionInfo = nil;

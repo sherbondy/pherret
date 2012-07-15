@@ -15,18 +15,29 @@
 
 @end
 
+@class OFFlickrAPIRequest;
 @protocol AFPhotoEditorControllerDelegate;
+@protocol OFFlickrAPIRequestDelegate;
 
-@interface PHTaskViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, AFPhotoEditorControllerDelegate>
+@interface PHTaskViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, AFPhotoEditorControllerDelegate, OFFlickrAPIRequestDelegate> {
+    OFFlickrAPIRequest *_flickrRequest;
+    NSString           *_lastPhotoID;
+    NSString           *_currentPhotoID;
+}
 
 - (id)initWithDelegate:(id<PHTaskDelegate>)delegate;
 - (IBAction)takePhoto:(id)sender;
 
 @property (nonatomic, weak) id<PHTaskDelegate> delegate;
 @property (nonatomic, strong) NSDictionary    *task;
+@property (nonatomic, readonly) OFFlickrAPIRequest *flickrRequest;
 
 @property (nonatomic, weak) IBOutlet UITextView  *taskNameView;
 @property (nonatomic, weak) IBOutlet UIButton    *uploadButton;
 @property (nonatomic, weak) IBOutlet UIImageView *photoImageView;
+
+@property (strong, nonatomic) IBOutlet UIView         *titleProgressView;
+@property (nonatomic, weak)   IBOutlet UIProgressView *progressView;
+@property (nonatomic, weak)   IBOutlet UILabel        *progressLabel;
 
 @end

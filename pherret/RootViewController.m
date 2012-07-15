@@ -53,7 +53,6 @@ static NSString *kUploadImageStep        = @"kUploadImageStep";
 {
     [super viewDidUnload];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -120,9 +119,7 @@ static NSString *kUploadImageStep        = @"kUploadImageStep";
     NSLog(@"%s %@ %@", __PRETTY_FUNCTION__, inRequest.sessionInfo, inResponseDictionary);
     
 	if (inRequest.sessionInfo == kUploadImageStep) {
-//		snapPictureDescriptionLabel.text = @"Setting properties...";
-        
-        
+        // just finished uploading a photo
         NSLog(@"%@", inResponseDictionary);
         NSString *photoID = [[inResponseDictionary valueForKeyPath:@"photoid"] textContent];
         
@@ -130,22 +127,13 @@ static NSString *kUploadImageStep        = @"kUploadImageStep";
         [_flickrRequest callAPIMethodWithPOST:@"flickr.photos.setMeta" arguments:[NSDictionary dictionaryWithObjectsAndKeys:photoID, @"photo_id", @"Snap and Run", @"title", @"Uploaded from my iPhone/iPod Touch", @"description", nil]];
 	}
     else if (inRequest.sessionInfo == kSetImagePropertiesStep) {
-//		[self updateUserInterface:nil];
-//		snapPictureDescriptionLabel.text = @"Done";
-        
-		[UIApplication sharedApplication].idleTimerDisabled = NO;
-        
     }
 }
 
 - (void)flickrAPIRequest:(OFFlickrAPIRequest *)inRequest didFailWithError:(NSError *)inError
 {
     NSLog(@"%s %@ %@", __PRETTY_FUNCTION__, inRequest.sessionInfo, inError);
-	if (inRequest.sessionInfo == kUploadImageStep) {
-//		[self updateUserInterface:nil];
-//		snapPictureDescriptionLabel.text = @"Failed";
-		[UIApplication sharedApplication].idleTimerDisabled = NO;
-        
+	if (inRequest.sessionInfo == kUploadImageStep) {        
 		[[[UIAlertView alloc] initWithTitle:@"API Failed" message:[inError description] delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil] show];
         
 	}

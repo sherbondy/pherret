@@ -37,6 +37,7 @@
 		3ED0404415B2D70E00E888CE /* AFPhotoEditorControllerOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EFD3D5515B2318B00B28496 /* AFPhotoEditorControllerOptions.h */; };
 		3ED0404515B2D70E00E888CE /* AFPhotoEditorSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EFD3D5615B2318B00B28496 /* AFPhotoEditorSession.h */; };
 		3ED0404615B2D70E00E888CE /* AFPhotoEditorStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EFD3D5715B2318B00B28496 /* AFPhotoEditorStyle.h */; };
+		3ED0404815B2ED3A00E888CE /* PHTitleProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ED0404715B2ED3A00E888CE /* PHTitleProgressView.xib */; };
 		3EF2558A15B2251100002259 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558915B2251100002259 /* UIKit.framework */; };
 		3EF2558C15B2251100002259 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558B15B2251100002259 /* Foundation.framework */; };
 		3EF2558E15B2251100002259 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558D15B2251100002259 /* CoreGraphics.framework */; };
@@ -88,6 +89,7 @@
 		3ED0403515B2CC2000E888CE /* next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "next@2x.png"; path = "resources/next@2x.png"; sourceTree = SOURCE_ROOT; };
 		3ED0403615B2CC2000E888CE /* prev.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = prev.png; path = resources/prev.png; sourceTree = SOURCE_ROOT; };
 		3ED0403715B2CC2000E888CE /* prev@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "prev@2x.png"; path = "resources/prev@2x.png"; sourceTree = SOURCE_ROOT; };
+		3ED0404715B2ED3A00E888CE /* PHTitleProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PHTitleProgressView.xib; sourceTree = "<group>"; };
 		3EF2558515B2251100002259 /* pherret.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pherret.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EF2558915B2251100002259 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3EF2558B15B2251100002259 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -281,6 +283,7 @@
 				3E4056AF15B28165007E8B67 /* PHHuntCellView.xib */,
 				3E4056B615B2972E007E8B67 /* PHTaskTableVC.xib */,
 				3ED0403115B2BDE500E888CE /* PHTaskViewController.xib */,
+				3ED0404715B2ED3A00E888CE /* PHTitleProgressView.xib */,
 			);
 			name = xibs;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				3ED0403915B2CC2000E888CE /* next@2x.png in Resources */,
 				3ED0403A15B2CC2000E888CE /* prev.png in Resources */,
 				3ED0403B15B2CC2000E888CE /* prev@2x.png in Resources */,
+				3ED0404815B2ED3A00E888CE /* PHTitleProgressView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
