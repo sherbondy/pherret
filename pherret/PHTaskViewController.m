@@ -7,6 +7,7 @@
 //
 
 #import "PHTaskViewController.h"
+#import "AFPhotoEditorController.h"
 
 @interface PHTaskViewController ()
 
@@ -41,7 +42,15 @@
 
 - (IBAction)takePhoto:(id)sender
 {
-    NSLog(@"Send to camera...");
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        imagePicker.cameraCaptureMode = (UIImagePickerControllerCameraCaptureModePhoto|UIImagePickerControllerCameraDeviceRear|UIImagePickerControllerCameraFlashModeAuto);
+    } else {
+        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary; // only for debug purposes
+    }
+    imagePicker.delegate = self;
+    [self presentModalViewController:imagePicker animated:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -80,6 +89,30 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [self dismissModalViewControllerAnimated:NO];
+    UIImage *result = [info objectForKey:UIImagePickerControllerOriginalImage];
+    AFPhotoEditorController *editorController = [[AFPhotoEditorController alloc] initWithImage:result];
+    editorController.delegate = self;
+    [self presentModalViewController:editorController animated:NO];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+- (void)photoEditor:(AFPhotoEditorController *)editor finishedWithImage:(UIImage *)image
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+- (void)photoEditorCanceled:(AFPhotoEditorController *)editor
+{
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 @end

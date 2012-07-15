@@ -32,6 +32,11 @@
 		3ED0403915B2CC2000E888CE /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ED0403515B2CC2000E888CE /* next@2x.png */; };
 		3ED0403A15B2CC2000E888CE /* prev.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ED0403615B2CC2000E888CE /* prev.png */; };
 		3ED0403B15B2CC2000E888CE /* prev@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ED0403715B2CC2000E888CE /* prev@2x.png */; };
+		3ED0404215B2D70E00E888CE /* AFPhotoEditorContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EFD3D5315B2318B00B28496 /* AFPhotoEditorContext.h */; };
+		3ED0404315B2D70E00E888CE /* AFPhotoEditorController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EFD3D5415B2318B00B28496 /* AFPhotoEditorController.h */; };
+		3ED0404415B2D70E00E888CE /* AFPhotoEditorControllerOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EFD3D5515B2318B00B28496 /* AFPhotoEditorControllerOptions.h */; };
+		3ED0404515B2D70E00E888CE /* AFPhotoEditorSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EFD3D5615B2318B00B28496 /* AFPhotoEditorSession.h */; };
+		3ED0404615B2D70E00E888CE /* AFPhotoEditorStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EFD3D5715B2318B00B28496 /* AFPhotoEditorStyle.h */; };
 		3EF2558A15B2251100002259 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558915B2251100002259 /* UIKit.framework */; };
 		3EF2558C15B2251100002259 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558B15B2251100002259 /* Foundation.framework */; };
 		3EF2558E15B2251100002259 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558D15B2251100002259 /* CoreGraphics.framework */; };
@@ -282,11 +287,27 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		3ED0403C15B2D66100E888CE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3ED0404215B2D70E00E888CE /* AFPhotoEditorContext.h in Headers */,
+				3ED0404315B2D70E00E888CE /* AFPhotoEditorController.h in Headers */,
+				3ED0404415B2D70E00E888CE /* AFPhotoEditorControllerOptions.h in Headers */,
+				3ED0404515B2D70E00E888CE /* AFPhotoEditorSession.h in Headers */,
+				3ED0404615B2D70E00E888CE /* AFPhotoEditorStyle.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		3EF2558415B2251100002259 /* pherret */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3EF2559D15B2251100002259 /* Build configuration list for PBXNativeTarget "pherret" */;
 			buildPhases = (
+				3ED0403C15B2D66100E888CE /* Headers */,
 				3EF2558115B2251100002259 /* Sources */,
 				3EF2558215B2251100002259 /* Frameworks */,
 				3EF2558315B2251100002259 /* Resources */,

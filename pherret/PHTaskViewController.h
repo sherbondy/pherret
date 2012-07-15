@@ -15,7 +15,9 @@
 
 @end
 
-@interface PHTaskViewController : UIViewController
+@protocol AFPhotoEditorControllerDelegate;
+
+@interface PHTaskViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, AFPhotoEditorControllerDelegate>
 
 - (id)initWithDelegate:(id<PHTaskDelegate>)delegate;
 - (IBAction)takePhoto:(id)sender;
