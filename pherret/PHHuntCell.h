@@ -13,10 +13,12 @@
 }
 
 - (id)initWithReuseIdentifier;
+- (void)refreshTimeLeft;
 
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *locationLabel;
 @property (nonatomic, weak) IBOutlet UILabel *timeLeftLabel;
 @property (nonatomic, weak) IBOutlet UILabel *playerCount;
+@property (nonatomic, strong) NSDate *endDate;
 
 @end

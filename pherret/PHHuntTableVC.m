@@ -27,7 +27,8 @@ static const NSInteger kAvailableHuntsSection = 1;
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        _dateTimer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(updateTimeLeftForVisibleCells) userInfo:nil repeats:YES];
+        [[NSRunLoop mainRunLoop] addTimer:_dateTimer forMode:@"NSDefaultRunLoopMode"];
     }
     return self;
 }
@@ -35,6 +36,15 @@ static const NSInteger kAvailableHuntsSection = 1;
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)updateTimeLeftForVisibleCells
+{
+    for (UITableViewCell *cell in self.tableView.visibleCells){
+        if ([cell isKindOfClass:[PHHuntCell class]]){
+            [cell performSelector:@selector(refreshTimeLeft)];
+        }
+    }
 }
 
 - (NSArray *)content {
@@ -133,6 +143,8 @@ static const NSInteger kAvailableHuntsSection = 1;
     // Configure the cell...
     cell.nameLabel.text = [item objectForKey:@"name"];
     cell.locationLabel.text = [item objectForKey:@"location"];
+    cell.playerCount.text = [NSString stringWithFormat:@"%d", ((NSArray *)[item objectForKey:@"participants"]).count];
+    cell.endDate = [NSDate dateWithTimeIntervalSince1970:[[item objectForKey:@"endDate"] doubleValue]];
     
     return cell;
 }

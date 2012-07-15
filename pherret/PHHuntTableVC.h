@@ -14,6 +14,8 @@
     JSONDecoder *_decoder;
     NSArray     *_myHunts;
     NSArray     *_availableHunts;
+    NSDateFormatter *_dateFormatter;
+    NSTimer         *_dateTimer;
 }
 
 - (void)reloadTableView;
