@@ -8,14 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		3E40568915B238E3007E8B67 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E40568715B238E3007E8B67 /* RootViewController.m */; };
-		3E40568E15B24226007E8B67 /* PHLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E40568C15B24226007E8B67 /* PHLoginViewController.m */; };
-		3E40568F15B24226007E8B67 /* PHLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E40568D15B24226007E8B67 /* PHLoginViewController.xib */; };
 		3E40569115B253B1007E8B67 /* dummy_hunts.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E40569015B253B1007E8B67 /* dummy_hunts.json */; };
 		3E40569415B25A8B007E8B67 /* PHHuntTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E40569315B25A8B007E8B67 /* PHHuntTableVC.m */; };
 		3E4056A915B2740D007E8B67 /* group.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E4056A715B2740D007E8B67 /* group.png */; };
 		3E4056AA15B2740D007E8B67 /* group@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E4056A815B2740D007E8B67 /* group@2x.png */; };
 		3E4056AE15B27946007E8B67 /* PHHuntCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4056AD15B27945007E8B67 /* PHHuntCell.m */; };
 		3E4056B015B28165007E8B67 /* PHHuntCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E4056AF15B28165007E8B67 /* PHHuntCellView.xib */; };
+		3E4056B315B29342007E8B67 /* PHTaskTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4056B215B29342007E8B67 /* PHTaskTableVC.m */; };
+		3E4056B715B2972E007E8B67 /* PHTaskTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E4056B615B2972E007E8B67 /* PHTaskTableVC.xib */; };
+		3E4056BA15B2998F007E8B67 /* PHLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4056B915B2998F007E8B67 /* PHLoginViewController.m */; };
+		3E4056BC15B29996007E8B67 /* PHLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E4056BB15B29996007E8B67 /* PHLoginViewController.xib */; };
 		3EF2558A15B2251100002259 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558915B2251100002259 /* UIKit.framework */; };
 		3EF2558C15B2251100002259 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558B15B2251100002259 /* Foundation.framework */; };
 		3EF2558E15B2251100002259 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558D15B2251100002259 /* CoreGraphics.framework */; };
@@ -36,9 +38,6 @@
 /* Begin PBXFileReference section */
 		3E40568615B238E3007E8B67 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		3E40568715B238E3007E8B67 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		3E40568B15B24226007E8B67 /* PHLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLoginViewController.h; sourceTree = "<group>"; };
-		3E40568C15B24226007E8B67 /* PHLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLoginViewController.m; sourceTree = "<group>"; };
-		3E40568D15B24226007E8B67 /* PHLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PHLoginViewController.xib; sourceTree = "<group>"; };
 		3E40569015B253B1007E8B67 /* dummy_hunts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dummy_hunts.json; sourceTree = "<group>"; };
 		3E40569215B25A8B007E8B67 /* PHHuntTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHHuntTableVC.h; sourceTree = "<group>"; };
 		3E40569315B25A8B007E8B67 /* PHHuntTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHHuntTableVC.m; sourceTree = "<group>"; };
@@ -47,6 +46,12 @@
 		3E4056AC15B27945007E8B67 /* PHHuntCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHHuntCell.h; sourceTree = "<group>"; };
 		3E4056AD15B27945007E8B67 /* PHHuntCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHHuntCell.m; sourceTree = "<group>"; };
 		3E4056AF15B28165007E8B67 /* PHHuntCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PHHuntCellView.xib; sourceTree = "<group>"; };
+		3E4056B115B29342007E8B67 /* PHTaskTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHTaskTableVC.h; sourceTree = "<group>"; };
+		3E4056B215B29342007E8B67 /* PHTaskTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHTaskTableVC.m; sourceTree = "<group>"; };
+		3E4056B615B2972E007E8B67 /* PHTaskTableVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PHTaskTableVC.xib; sourceTree = "<group>"; };
+		3E4056B815B2998F007E8B67 /* PHLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLoginViewController.h; sourceTree = "<group>"; };
+		3E4056B915B2998F007E8B67 /* PHLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLoginViewController.m; sourceTree = "<group>"; };
+		3E4056BB15B29996007E8B67 /* PHLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PHLoginViewController.xib; sourceTree = "<group>"; };
 		3EF2558515B2251100002259 /* pherret.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pherret.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EF2558915B2251100002259 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3EF2558B15B2251100002259 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -153,8 +158,10 @@
 				3E40569315B25A8B007E8B67 /* PHHuntTableVC.m */,
 				3E40568615B238E3007E8B67 /* RootViewController.h */,
 				3E40568715B238E3007E8B67 /* RootViewController.m */,
-				3E40568B15B24226007E8B67 /* PHLoginViewController.h */,
-				3E40568C15B24226007E8B67 /* PHLoginViewController.m */,
+				3E4056B115B29342007E8B67 /* PHTaskTableVC.h */,
+				3E4056B215B29342007E8B67 /* PHTaskTableVC.m */,
+				3E4056B815B2998F007E8B67 /* PHLoginViewController.h */,
+				3E4056B915B2998F007E8B67 /* PHLoginViewController.m */,
 				3E4056AC15B27945007E8B67 /* PHHuntCell.h */,
 				3E4056AD15B27945007E8B67 /* PHHuntCell.m */,
 				3EFD3D5015B2318300B28496 /* external */,
@@ -217,8 +224,9 @@
 		3EFD3D5D15B2338700B28496 /* xibs */ = {
 			isa = PBXGroup;
 			children = (
-				3E40568D15B24226007E8B67 /* PHLoginViewController.xib */,
+				3E4056BB15B29996007E8B67 /* PHLoginViewController.xib */,
 				3E4056AF15B28165007E8B67 /* PHHuntCellView.xib */,
+				3E4056B615B2972E007E8B67 /* PHTaskTableVC.xib */,
 			);
 			name = xibs;
 			sourceTree = "<group>";
@@ -278,11 +286,12 @@
 			files = (
 				3EF2559415B2251100002259 /* InfoPlist.strings in Resources */,
 				3EFD3D5C15B2318B00B28496 /* AviarySDKResources.bundle in Resources */,
-				3E40568F15B24226007E8B67 /* PHLoginViewController.xib in Resources */,
 				3E40569115B253B1007E8B67 /* dummy_hunts.json in Resources */,
 				3E4056A915B2740D007E8B67 /* group.png in Resources */,
 				3E4056AA15B2740D007E8B67 /* group@2x.png in Resources */,
 				3E4056B015B28165007E8B67 /* PHHuntCellView.xib in Resources */,
+				3E4056B715B2972E007E8B67 /* PHTaskTableVC.xib in Resources */,
+				3E4056BC15B29996007E8B67 /* PHLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,9 +322,10 @@
 				3EF2559615B2251100002259 /* main.m in Sources */,
 				3EF2559A15B2251100002259 /* PHAppDelegate.m in Sources */,
 				3E40568915B238E3007E8B67 /* RootViewController.m in Sources */,
-				3E40568E15B24226007E8B67 /* PHLoginViewController.m in Sources */,
 				3E40569415B25A8B007E8B67 /* PHHuntTableVC.m in Sources */,
 				3E4056AE15B27946007E8B67 /* PHHuntCell.m in Sources */,
+				3E4056B315B29342007E8B67 /* PHTaskTableVC.m in Sources */,
+				3E4056BA15B2998F007E8B67 /* PHLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

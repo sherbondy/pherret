@@ -31,25 +31,29 @@ static NSString *kUploadImageStep        = @"kUploadImageStep";
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = @"Pick a Hunt!";
-        _huntTableVC = [[PHHuntTableVC alloc] initWithStyle:UITableViewStylePlain];
+        self.huntTableVC = [[PHHuntTableVC alloc] initWithStyle:UITableViewStylePlain];
         self.view = self.huntTableVC.tableView;
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginStatusChanged:) name:PHShouldUpdateAuthInfoNotification object:nil];
-        
-        _loginVC = [[PHLoginViewController alloc] initWithNibName:nil bundle:nil];
-        _loginVC.delegate = self;
-        
-        [self loginStatusChanged:nil];
+        if (!_loginVC){
+            _loginVC = [[PHLoginViewController alloc] initWithNibName:nil bundle:nil];
+            _loginVC.delegate = self;
+        }
     }
     return self;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self loginStatusChanged:nil];
+}
 
-    if (![PHAppDelegate sharedDelegate].isLoggedIn){
-        [self.navigationController presentModalViewController:_loginVC animated:YES];
-    }
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -70,7 +74,7 @@ static NSString *kUploadImageStep        = @"kUploadImageStep";
 
 - (void)logout {
     [[PHAppDelegate sharedDelegate] setAndStoreFlickrAuthToken:nil secret:nil];
-    self.navigationController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Login" style:UIBarButtonItemStyleBordered target:self action:@selector(authorize)];
+    [self loginStatusChanged:nil];
 }
 
 - (void)authorize
@@ -91,8 +95,10 @@ static NSString *kUploadImageStep        = @"kUploadImageStep";
     if ([PHAppDelegate sharedDelegate].isLoggedIn){
         NSLog(@"Login status changed: %@", [PHAppDelegate sharedDelegate].flickrUserName);
         [_loginVC hide];
-        self.navigationController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStyleBordered target:self action:@selector(logout)];
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStyleBordered target:self action:@selector(logout)];
         [self.huntTableVC reloadTableView];
+    } else {
+        [self.navigationController presentModalViewController:_loginVC animated:YES];
     }
 }
 

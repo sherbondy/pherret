@@ -9,6 +9,7 @@
 #import "PHHuntTableVC.h"
 #import "PHHuntCell.h"
 #import "PHAppDelegate.h"
+#import "PHTaskTableVC.h"
 #import <AFNetworking/AFnetworking.h>
 #import <JSONKit/JSONKit.h>
 
@@ -182,9 +183,9 @@ static const NSInteger kAvailableHuntsSection = 1;
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
-    UIViewController *fakeVC = [[UIViewController alloc] init];
-    fakeVC.title = @"Testing";
-    [[PHAppDelegate sharedDelegate].navController pushViewController:fakeVC animated:YES];
+    PHTaskTableVC *huntTaskVC = [[PHTaskTableVC alloc] init];
+    huntTaskVC.huntInfo = [[self huntsForSection:indexPath.section] objectAtIndex:indexPath.row];
+    [[PHAppDelegate sharedDelegate].navController pushViewController:huntTaskVC animated:YES];
 }
 
 @end
