@@ -14,15 +14,12 @@
 #define FLICKR_API_KEY @"8c6dee3864f3b801f49c0976fbfb76a7"
 #define FLICKR_API_SHARED_SECRET @"81b7cff625c1ab29"
 
-NSString *PHShouldUpdateAuthInfoNotification = @"PHShouldUpdateAuthInfoNotification";
+static NSString *kStoredAuthTokenKeyName            = @"FlickrOAuthToken";
+static NSString *kStoredAuthTokenSecretKeyName      = @"FlickrOAuthTokenSecret";
 
-NSString *kStoredAuthTokenKeyName            = @"FlickrOAuthToken";
-NSString *kStoredAuthTokenSecretKeyName      = @"FlickrOAuthTokenSecret";
+static NSString *kGetAccessTokenStep                = @"kGetAccessTokenStep";
+static NSString *kCheckTokenStep                    = @"kCheckTokenStep";
 
-NSString *kGetAccessTokenStep                = @"kGetAccessTokenStep";
-NSString *kCheckTokenStep                    = @"kCheckTokenStep";
-
-NSString *PHCallbackURLBaseString            = @"pherret://auth";
 
 @implementation PHAppDelegate
 
@@ -41,45 +38,18 @@ NSString *PHCallbackURLBaseString            = @"pherret://auth";
     [self.window makeKeyAndVisible];
     
     UIViewController       *rootVC        = [[RootViewController alloc] initWithNibName:nil bundle:nil];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:rootVC];
-    self.window.rootViewController = navController;
+    _navController = [[UINavigationController alloc] initWithRootViewController:rootVC];
+
+    self.window.rootViewController = _navController;
     
+    _navController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:nil action:nil];
+        
     if ([self.flickrContext.OAuthToken length]) {
 		[self flickrRequest].sessionInfo = kCheckTokenStep;
 		[_flickrRequest callAPIMethodWithGET:@"flickr.test.login" arguments:nil];
-        
-//		[activityIndicator startAnimating];
-//		[_viewController.view addSubview:progressView];
 	}
     
     return YES;
-}
-
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
 
@@ -101,8 +71,6 @@ NSString *PHCallbackURLBaseString            = @"pherret://auth";
         
         [self flickrRequest].sessionInfo = kGetAccessTokenStep;
         [_flickrRequest fetchOAuthAccessTokenWithRequestToken:token verifier:verifier];
-//        [activityIndicator startAnimating];
-//        [viewController.view addSubview:progressView];
     }
     
     return YES;
@@ -155,8 +123,6 @@ NSString *PHCallbackURLBaseString            = @"pherret://auth";
 - (void)cancelAction
 {
 	[_flickrRequest cancel];
-//	[activityIndicator stopAnimating];
-//	[progressView removeFromSuperview];
 	[self setAndStoreFlickrAuthToken:nil secret:nil];
 	[[NSNotificationCenter defaultCenter] postNotificationName:PHShouldUpdateAuthInfoNotification object:self];
 }
@@ -171,8 +137,6 @@ NSString *PHCallbackURLBaseString            = @"pherret://auth";
     [self setAndStoreFlickrAuthToken:inAccessToken secret:inSecret];
     self.flickrUserName = inUserName;
     
-//	[activityIndicator stopAnimating];
-//	[progressView removeFromSuperview];
 	[[NSNotificationCenter defaultCenter] postNotificationName:PHShouldUpdateAuthInfoNotification object:self];
     [self flickrRequest].sessionInfo = nil;
 }
@@ -183,8 +147,6 @@ NSString *PHCallbackURLBaseString            = @"pherret://auth";
 		self.flickrUserName = [inResponseDictionary valueForKeyPath:@"user.username._text"];
 	}
     
-//	[activityIndicator stopAnimating];
-//	[progressView removeFromSuperview];
 	[[NSNotificationCenter defaultCenter] postNotificationName:PHShouldUpdateAuthInfoNotification object:self];
     [self flickrRequest].sessionInfo = nil;
 }
@@ -196,10 +158,7 @@ NSString *PHCallbackURLBaseString            = @"pherret://auth";
 	else if (inRequest.sessionInfo == kCheckTokenStep) {
 		[self setAndStoreFlickrAuthToken:nil secret:nil];
 	}
-    
-//	[activityIndicator stopAnimating];
-//	[progressView removeFromSuperview];
-    
+
 	[[[UIAlertView alloc] initWithTitle:@"Could not connect to Flickr" message:[inError description]
                                delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil] show];
 	[[NSNotificationCenter defaultCenter] postNotificationName:PHShouldUpdateAuthInfoNotification object:self];

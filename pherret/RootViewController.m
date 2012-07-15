@@ -9,12 +9,13 @@
 #import "RootViewController.h"
 #import "PHAppDelegate.h"
 #import "PHLoginViewController.h"
+#import "PHHuntTableVC.h"
 #import <ObjectiveFlickr.h>
 
-NSString *kFetchRequestTokenStep  = @"kFetchRequestTokenStep";
-NSString *kGetUserInfoStep        = @"kGetUserInfoStep";
-NSString *kSetImagePropertiesStep = @"kSetImagePropertiesStep";
-NSString *kUploadImageStep        = @"kUploadImageStep";
+static NSString *kFetchRequestTokenStep  = @"kFetchRequestTokenStep";
+static NSString *kGetUserInfoStep        = @"kGetUserInfoStep";
+static NSString *kSetImagePropertiesStep = @"kSetImagePropertiesStep";
+static NSString *kUploadImageStep        = @"kUploadImageStep";
 
 @interface RootViewController ()
 
@@ -23,12 +24,15 @@ NSString *kUploadImageStep        = @"kUploadImageStep";
 @implementation RootViewController
 
 @synthesize flickrRequest = _flickrRequest;
+@synthesize huntTableVC   = _huntTableVC;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = @"Pick a Hunt!";
+        self.huntTableVC = [[PHHuntTableVC alloc] initWithStyle:UITableViewStylePlain];
+        self.view = self.huntTableVC.tableView;
     }
     return self;
 }
@@ -37,24 +41,25 @@ NSString *kUploadImageStep        = @"kUploadImageStep";
 {
     [super viewDidLoad];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginStatusChanged:) name:PHShouldUpdateAuthInfoNotification object:nil];
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-
+    
     if (!_loginVC){
         _loginVC = [[PHLoginViewController alloc] initWithNibName:nil bundle:nil];
         _loginVC.delegate = self;
     }
     
     [self loginStatusChanged:nil];
+}
+
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
     if (![PHAppDelegate sharedDelegate].isLoggedIn){
         [self.navigationController presentModalViewController:_loginVC animated:YES];
     }
@@ -97,7 +102,7 @@ NSString *kUploadImageStep        = @"kUploadImageStep";
 
 - (void)loginStatusChanged:(NSNotification *)aNotification {
     if ([PHAppDelegate sharedDelegate].isLoggedIn){
-        NSLog(@"%@", [PHAppDelegate sharedDelegate].flickrUserName);
+        NSLog(@"Login status changed: %@", [PHAppDelegate sharedDelegate].flickrUserName);
         [_loginVC hide];
         self.navigationController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStyleBordered target:self action:@selector(logout)];
     }

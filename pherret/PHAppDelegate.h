@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-NSString *PHCallbackURLBaseString;
-NSString *PHShouldUpdateAuthInfoNotification;
+static NSString *PHShouldUpdateAuthInfoNotification = @"PHShouldUpdateAuthInfoNotification";
+static NSString *PHCallbackURLBaseString            = @"pherret://auth";
 
 @class OFFlickrAPIContext;
 @class OFFlickrAPIRequest;
@@ -18,6 +18,7 @@ NSString *PHShouldUpdateAuthInfoNotification;
 @interface PHAppDelegate : UIResponder <UIApplicationDelegate, OFFlickrAPIRequestDelegate> {
     OFFlickrAPIContext *_flickrContext;
 	OFFlickrAPIRequest *_flickrRequest;
+    UINavigationController *_navController;
 }
 
 + (PHAppDelegate *)sharedDelegate;

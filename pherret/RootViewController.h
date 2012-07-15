@@ -10,6 +10,7 @@
 
 @class OFFlickrAPIRequest;
 @class PHLoginViewController;
+@class PHHuntTableVC;
 @protocol OFFlickrAPIRequestDelegate;
 @protocol FlickrLoginProtocol;
 
@@ -20,5 +21,7 @@
 - (void)authorize;
 
 @property (nonatomic, readonly) OFFlickrAPIRequest *flickrRequest;
+@property (nonatomic, strong) PHHuntTableVC *huntTableVC;
+@property (nonatomic, assign) IBOutlet UITableView *tableView;
 
 @end
