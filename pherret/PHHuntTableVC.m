@@ -7,6 +7,7 @@
 //
 
 #import "PHHuntTableVC.h"
+#import "PHHuntCell.h"
 #import "PHAppDelegate.h"
 #import <AFNetworking/AFnetworking.h>
 #import <JSONKit/JSONKit.h>
@@ -140,15 +141,16 @@ static const NSInteger kAvailableHuntsSection = 1;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"HuntCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (!cell){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-    }
+    PHHuntCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
+    if (!cell){
+        cell = [[PHHuntCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+        
     NSDictionary *item = [[self huntsForSection:indexPath.section] objectAtIndex:indexPath.row];
     // Configure the cell...
-    cell.textLabel.text = [item objectForKey:@"name"];
-    cell.detailTextLabel.text = [item objectForKey:@"location"];
+    cell.nameLabel.text = [item objectForKey:@"name"];
+    cell.locationLabel.text = [item objectForKey:@"location"];
     
     return cell;
 }
