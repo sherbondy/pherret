@@ -10,6 +10,8 @@
 #import "PHAppDelegate.h"
 #import "PHMapView.h"
 #import "PHDataHelpers.h"
+#import "PHTaskViewController.h"
+#import <JSONKit/JSONKit.h>
 
 @interface PHTaskTableVC ()
 
@@ -18,6 +20,7 @@
 @implementation PHTaskTableVC
 
 @synthesize huntInfo = _huntInfo;
+@synthesize content = _content;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -50,6 +53,37 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (NSDictionary *)content {
+    if (!_content){
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"dummy_tasks" ofType:@"json"];
+        
+        /*
+         NSURL *url = [NSURL URLWithString:filePath];
+         NSURLRequest *request = [NSURLRequest requestWithURL:url];
+         AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+         NSLog(@"Content: %@", JSON);
+         _content = JSON;
+         } failure:nil];
+         [operation start];
+         */
+        
+        NSData *fileData = [NSData dataWithContentsOfFile:filePath];
+        if (!_decoder) {
+            _decoder = [[JSONDecoder alloc] init];
+        }
+        _content = [[_decoder objectWithData:fileData] objectForKey:@"data"];
+    }
+    
+    return _content;
+}
+
+- (NSArray *)tasks {
+    if (self.content){
+        return [self.content objectForKey:@"tasks"];
+    }
+    return nil;
+}
+
 - (void)toggleMap
 {
     UIView *viewOne = _isTableViewHidden ? _mapView : self.tableView;
@@ -64,7 +98,14 @@
     _huntInfo = huntInfo;
     self.title = [_huntInfo objectForKey:@"name"];
     
-    if (![PHDataHelpers participants:[_huntInfo objectForKey:@"participants"] containsUser:[PHAppDelegate sharedDelegate].flickrUserName]){
+    _isParticipant = [PHDataHelpers participants:[_huntInfo objectForKey:@"participants"]
+                                    containsUser:[PHAppDelegate sharedDelegate].flickrUserName];
+    
+    if (!_taskVC){
+        _taskVC = [[PHTaskViewController alloc] initWithDelegate:self];
+    }
+
+    if (!_isParticipant){
         self.tableView.tableHeaderView = _joinHuntView;
     }
 }
@@ -85,24 +126,26 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return self.tasks.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"TaskCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (!cell){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
     
-    // Configure the cell...
+    NSDictionary *task = [self.tasks objectAtIndex:indexPath.row];
+    cell.textLabel.text = [task objectForKey:@"name"];
     
     return cell;
 }
@@ -150,13 +193,27 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+
+    _selectedTaskIndex = indexPath.row;
+    _taskVC.task = [self.tasks objectAtIndex:_selectedTaskIndex];
+    [self.navigationController pushViewController:_taskVC animated:YES];
+}
+
+- (void)moveToNextTask
+{
+    NSUInteger nextIndex = _selectedTaskIndex + 1;
+    if (nextIndex < self.tasks.count){
+        _selectedTaskIndex = nextIndex;
+        _taskVC.task = [self.tasks objectAtIndex:_selectedTaskIndex];
+    }
+}
+- (void)moveToPrevTask
+{
+    NSUInteger prevIndex = _selectedTaskIndex - 1;
+    if (prevIndex < self.tasks.count){
+        _selectedTaskIndex = prevIndex;
+        _taskVC.task = [self.tasks objectAtIndex:prevIndex];
+    }
 }
 
 @end

@@ -9,15 +9,24 @@
 #import <UIKit/UIKit.h>
 
 @class PHMapView;
+@class JSONDecoder;
+@class PHTaskViewController;
+@protocol PHTaskDelegate;
 
-@interface PHTaskTableVC : UITableViewController {
+@interface PHTaskTableVC : UITableViewController <PHTaskDelegate> {
     UIView *_joinHuntView;
     PHMapView *_mapView;
     BOOL    _isTableViewHidden;
+    BOOL    _isParticipant;
+    JSONDecoder *_decoder;
+    PHTaskViewController *_taskVC;
+    NSUInteger    _selectedTaskIndex;
 }
 
 - (IBAction)joinHunt:(id)sender;
 
 @property (nonatomic, strong) NSDictionary *huntInfo;
+@property (nonatomic, readonly) NSDictionary *content;
+@property (nonatomic, readonly) NSArray *tasks;
 
 @end
