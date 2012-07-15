@@ -43,6 +43,12 @@ static NSString *kUploadImageStep        = @"kUploadImageStep";
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.huntTableVC reloadTableView];
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];

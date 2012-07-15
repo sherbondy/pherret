@@ -104,6 +104,7 @@ static const NSInteger kAvailableHuntsSection = 1;
 
 - (void)reloadTableView
 {
+    _content;
     _myHunts = nil;
     _availableHunts = nil;
     [self.tableView reloadData];
@@ -122,7 +123,7 @@ static const NSInteger kAvailableHuntsSection = 1;
         case kMyHuntsSection:
             return @"My Hunts";
         case kAvailableHuntsSection:
-            return @"Available Hunts";
+            return @"Public Hunts";
         default:
             return nil;
     }

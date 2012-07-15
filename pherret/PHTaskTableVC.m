@@ -72,6 +72,13 @@
             _decoder = [[JSONDecoder alloc] init];
         }
         _content = [[_decoder objectWithData:fileData] objectForKey:@"data"];
+        
+        [_mapView removeAllPins];
+        for (NSDictionary *task in [_content objectForKey:@"tasks"]){
+            for (NSDictionary *photo in [task objectForKey:@"photos"]){
+                [_mapView addPinAtLocation:[photo objectForKey:@"geolocation"]];
+            }
+        }
     }
     
     return _content;

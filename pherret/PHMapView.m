@@ -20,9 +20,12 @@
 
 - (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate title:(NSString *)title subtitle:(NSString *)subtitle
 {
-    _coordinate = coordinate;
-    _title = title;
-    _subtitle = subtitle;
+    if (self = [super init]){
+        _coordinate = coordinate;
+        _title = title;
+        _subtitle = subtitle;
+    }
+    return self;
 }
 
 @end
@@ -44,9 +47,14 @@
     return self;
 }
 
+- (void)removeAllPins {
+    [_mapView removeAnnotations:[_mapView annotations]];
+}
+
 - (void)addPinAtLocation:(NSDictionary *)location {
     // should actually do the proper thing with coords
-    CLLocationCoordinate2D coordinate = {0,0};
+    CLLocationCoordinate2D coordinate = {[[location objectForKey:@"latitude"] doubleValue],
+                                         [[location objectForKey:@"longitude"] doubleValue]};
     PHAnnotation *annotation = [[PHAnnotation alloc] initWithCoordinate:coordinate title:@"Photo 1" subtitle:@"by Ethan"];
     [_mapView addAnnotation:annotation];
 }

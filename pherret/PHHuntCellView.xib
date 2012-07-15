@@ -139,7 +139,7 @@
 					<object class="IBUIImageView" id="353738361">
 						<reference key="NSNextResponder" ref="366799451"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{272, 2}, {48, 24}}</string>
+						<string key="NSFrame">{{272, -2}, {48, 32}}</string>
 						<reference key="NSSuperview" ref="366799451"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="225020378"/>
@@ -158,6 +158,7 @@
 						<string key="NSFrame">{{275, 24}, {42, 21}}</string>
 						<reference key="NSSuperview" ref="366799451"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -258,8 +259,8 @@
 							<reference ref="916264949"/>
 							<reference ref="120955834"/>
 							<reference ref="718065879"/>
-							<reference ref="353738361"/>
 							<reference ref="225020378"/>
+							<reference ref="353738361"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>

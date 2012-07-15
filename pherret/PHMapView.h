@@ -13,6 +13,9 @@
 
 @interface PHMapView : UIView <MKMapViewDelegate>
 
+- (void)removeAllPins;
+- (void)addPinAtLocation:(NSDictionary *)location;
+
 @property (nonatomic, readonly, strong) MKMapView *mapView;
 
 @end
