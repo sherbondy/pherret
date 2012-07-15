@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RootViewController : UIViewController
+@class OFFlickrAPIRequest;
+@class PHLoginViewController;
+@protocol OFFlickrAPIRequestDelegate;
+@protocol FlickrLoginProtocol;
+
+@interface RootViewController : UIViewController <OFFlickrAPIRequestDelegate, FlickrLoginProtocol> {
+    PHLoginViewController *_loginVC;
+}
+
+- (void)authorize;
+
+@property (nonatomic, readonly) OFFlickrAPIRequest *flickrRequest;
 
 @end

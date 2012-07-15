@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3E40568915B238E3007E8B67 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E40568715B238E3007E8B67 /* RootViewController.m */; };
 		3E40568A15B238E3007E8B67 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E40568815B238E3007E8B67 /* RootViewController.xib */; };
+		3E40568E15B24226007E8B67 /* PHLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E40568C15B24226007E8B67 /* PHLoginViewController.m */; };
+		3E40568F15B24226007E8B67 /* PHLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E40568D15B24226007E8B67 /* PHLoginViewController.xib */; };
 		3EF2558A15B2251100002259 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558915B2251100002259 /* UIKit.framework */; };
 		3EF2558C15B2251100002259 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558B15B2251100002259 /* Foundation.framework */; };
 		3EF2558E15B2251100002259 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558D15B2251100002259 /* CoreGraphics.framework */; };
@@ -30,6 +32,9 @@
 		3E40568615B238E3007E8B67 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		3E40568715B238E3007E8B67 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		3E40568815B238E3007E8B67 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		3E40568B15B24226007E8B67 /* PHLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLoginViewController.h; sourceTree = "<group>"; };
+		3E40568C15B24226007E8B67 /* PHLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLoginViewController.m; sourceTree = "<group>"; };
+		3E40568D15B24226007E8B67 /* PHLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PHLoginViewController.xib; sourceTree = "<group>"; };
 		3EF2558515B2251100002259 /* pherret.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pherret.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EF2558915B2251100002259 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3EF2558B15B2251100002259 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -126,7 +131,8 @@
 				3EF2559015B2251100002259 /* Supporting Files */,
 				3E40568615B238E3007E8B67 /* RootViewController.h */,
 				3E40568715B238E3007E8B67 /* RootViewController.m */,
-				3E40568815B238E3007E8B67 /* RootViewController.xib */,
+				3E40568B15B24226007E8B67 /* PHLoginViewController.h */,
+				3E40568C15B24226007E8B67 /* PHLoginViewController.m */,
 			);
 			path = pherret;
 			sourceTree = "<group>";
@@ -184,6 +190,8 @@
 		3EFD3D5D15B2338700B28496 /* xibs */ = {
 			isa = PBXGroup;
 			children = (
+				3E40568D15B24226007E8B67 /* PHLoginViewController.xib */,
+				3E40568815B238E3007E8B67 /* RootViewController.xib */,
 			);
 			name = xibs;
 			sourceTree = "<group>";
@@ -244,6 +252,7 @@
 				3EF2559415B2251100002259 /* InfoPlist.strings in Resources */,
 				3EFD3D5C15B2318B00B28496 /* AviarySDKResources.bundle in Resources */,
 				3E40568A15B238E3007E8B67 /* RootViewController.xib in Resources */,
+				3E40568F15B24226007E8B67 /* PHLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +283,7 @@
 				3EF2559615B2251100002259 /* main.m in Sources */,
 				3EF2559A15B2251100002259 /* PHAppDelegate.m in Sources */,
 				3E40568915B238E3007E8B67 /* RootViewController.m in Sources */,
+				3E40568E15B24226007E8B67 /* PHLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,8 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PHAppDelegate : UIResponder <UIApplicationDelegate>
+NSString *PHCallbackURLBaseString;
+NSString *PHShouldUpdateAuthInfoNotification;
 
-@property (strong, nonatomic) UIWindow *window;
+@class OFFlickrAPIContext;
+@class OFFlickrAPIRequest;
+@protocol OFFlickrAPIRequestDelegate;
+
+@interface PHAppDelegate : UIResponder <UIApplicationDelegate, OFFlickrAPIRequestDelegate> {
+    OFFlickrAPIContext *_flickrContext;
+	OFFlickrAPIRequest *_flickrRequest;
+}
+
++ (PHAppDelegate *)sharedDelegate;
+
+- (void)setAndStoreFlickrAuthToken:(NSString *)inAuthToken secret:(NSString *)inSecret;
+
+@property (strong, nonatomic)   UIWindow *window;
+@property (nonatomic, readonly) OFFlickrAPIContext *flickrContext;
+@property (nonatomic, retain)   NSString *flickrUserName;
+@property (nonatomic, readonly) BOOL isLoggedIn;
 
 @end
