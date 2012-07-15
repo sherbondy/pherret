@@ -8,7 +8,24 @@
 
 #import "PHMapView.h"
 
+#import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
+
+@interface PHAnnotation : NSObject <MKAnnotation>
+@end
+
+@implementation PHAnnotation
+
+@synthesize coordinate = _coordinate, title = _title, subtitle = _subtitle;
+
+- (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate title:(NSString *)title subtitle:(NSString *)subtitle
+{
+    _coordinate = coordinate;
+    _title = title;
+    _subtitle = subtitle;
+}
+
+@end
 
 @implementation PHMapView
 
@@ -25,6 +42,13 @@
         [self addSubview:_mapView];
     }
     return self;
+}
+
+- (void)addPinAtLocation:(NSDictionary *)location {
+    // should actually do the proper thing with coords
+    CLLocationCoordinate2D coordinate = {0,0};
+    PHAnnotation *annotation = [[PHAnnotation alloc] initWithCoordinate:coordinate title:@"Photo 1" subtitle:@"by Ethan"];
+    [_mapView addAnnotation:annotation];
 }
 
 - (void)mapView:(MKMapView *)mv didAddAnnotationViews:(NSArray *)views {

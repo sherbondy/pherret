@@ -1,8 +1,20 @@
 {
-    "content":[
-               {"name":"Hunt 1", "location":"A place1", "endDate":1342349330, "participants": ["bob", "jim", "tim"]},
-               {"name":"Hunt 2", "location":"A place2", "endDate":1342345330, "participants": ["bob", "jim", "sherbonbon"]},
-               {"name":"Hunt 3", "location":"A place3", "endDate":1342349130, "participants": ["bob", "jim", "tim"]},
-               {"name":"Hunt 4", "location":"A place4", "endDate":1342349330, "participants": ["bob", "jim", "sherbonbon"]}
+    "data":[
+               {"name":"Hunt 1", "location":"A place1", "endDate":1342349330, "participants": [
+                                                                                               {"name":"bob", "flickrID": "9656853@N08"},
+                                                                                               {"name":"jim", "flickrID": "fake"},
+                                                                                               {"name":"tim", "flickrID": "fake"}]},
+            {"name":"Hunt 2", "location":"A place2", "endDate":1342345330, "participants": [
+                                                                                            {"name":"bob", "flickrID": "9656853@N08"},
+                                                                                            {"name":"jim", "flickrID": "fake"},
+                                                                                            {"name":"tim", "flickrID": "fake"}]},
+            {"name":"Hunt 3", "location":"A place3", "endDate":1342349130, "participants": [
+                                                                                            {"name":"sherbonbon", "flickrID": "9656853@N08"},
+                                                                                            {"name":"jim", "flickrID": "fake"},
+                                                                                            {"name":"tim", "flickrID": "fake"}]},
+            {"name":"Hunt 4", "location":"A place4", "endDate":1342349330, "participants": [
+                                                                                            {"name":"sherbonbon", "flickrID": "9656853@N08"},
+                                                                                            {"name":"jim", "flickrID": "fake"},
+                                                                                            {"name":"tim", "flickrID": "fake"}]}
     ]
 }

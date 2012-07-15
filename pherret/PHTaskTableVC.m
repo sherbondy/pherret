@@ -9,6 +9,7 @@
 #import "PHTaskTableVC.h"
 #import "PHAppDelegate.h"
 #import "PHMapView.h"
+#import "PHDataHelpers.h"
 
 @interface PHTaskTableVC ()
 
@@ -62,7 +63,8 @@
 {
     _huntInfo = huntInfo;
     self.title = [_huntInfo objectForKey:@"name"];
-    if (![[_huntInfo objectForKey:@"participants"] containsObject:[PHAppDelegate sharedDelegate].flickrUserName]){
+    
+    if (![PHDataHelpers participants:[_huntInfo objectForKey:@"participants"] containsUser:[PHAppDelegate sharedDelegate].flickrUserName]){
         self.tableView.tableHeaderView = _joinHuntView;
     }
 }

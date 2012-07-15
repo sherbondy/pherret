@@ -11,15 +11,15 @@
 @class JSONDecoder;
 
 @interface PHHuntTableVC : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
-    JSONDecoder *_decoder;
-    NSArray     *_myHunts;
-    NSArray     *_availableHunts;
+    JSONDecoder     *_decoder;
+    NSArray         *_myHunts;
+    NSArray         *_availableHunts;
     NSDateFormatter *_dateFormatter;
     NSTimer         *_dateTimer;
 }
 
 - (void)reloadTableView;
 
-@property (nonatomic, strong, readonly) NSArray *content;
+@property (nonatomic, strong, readonly) NSMutableArray *content;
 
 @end

@@ -10,6 +10,7 @@
 #import "PHHuntCell.h"
 #import "PHAppDelegate.h"
 #import "PHTaskTableVC.h"
+#import "PHDataHelpers.h"
 #import <AFNetworking/AFnetworking.h>
 #import <JSONKit/JSONKit.h>
 
@@ -66,7 +67,7 @@ static const NSInteger kAvailableHuntsSection = 1;
         if (!_decoder) {
             _decoder = [[JSONDecoder alloc] init];
         }
-        _content = [[_decoder objectWithData:fileData] objectForKey:@"content"];
+        _content = [[_decoder objectWithData:fileData] objectForKey:@"data"];
     }
     
     return _content;
@@ -77,8 +78,10 @@ static const NSInteger kAvailableHuntsSection = 1;
     if (!_myHunts){
         NSMutableArray *myHunts = [NSMutableArray new];
         NSMutableArray *availableHunts = [NSMutableArray new];
+        NSString *username = [PHAppDelegate sharedDelegate].flickrUserName;
         for (NSDictionary *hunt in self.content){
-            if ([[hunt objectForKey:@"participants"] containsObject:[PHAppDelegate sharedDelegate].flickrUserName]){
+            NSArray *participants = [hunt objectForKey:@"participants"];
+            if ([PHDataHelpers participants:participants containsUser:username]){
                 [myHunts addObject:hunt];
             } else {
                 [availableHunts addObject:hunt];
