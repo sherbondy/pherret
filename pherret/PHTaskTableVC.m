@@ -20,7 +20,7 @@
 @implementation PHTaskTableVC
 
 @synthesize huntInfo = _huntInfo;
-@synthesize content = _content;
+@synthesize tasks = _tasks;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -53,42 +53,19 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (NSDictionary *)content {
-    if (!_content){
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"dummy_tasks" ofType:@"json"];
-        
-        /*
-         NSURL *url = [NSURL URLWithString:filePath];
-         NSURLRequest *request = [NSURLRequest requestWithURL:url];
-         AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-         NSLog(@"Content: %@", JSON);
-         _content = JSON;
-         } failure:nil];
-         [operation start];
-         */
-        
-        NSData *fileData = [NSData dataWithContentsOfFile:filePath];
-        if (!_decoder) {
-            _decoder = [[JSONDecoder alloc] init];
+- (void)setTasks:(NSArray *)tasks {
+    _tasks = tasks;
+
+    [_mapView removeAllPins];
+    for (NSDictionary *task in tasks){
+        for (NSDictionary *photo in [task objectForKey:@"photos"]){
+            [_mapView addPinAtLocation:[photo objectForKey:@"geolocation"]];
         }
-        _content = [[_decoder objectWithData:fileData] objectForKey:@"data"];
-        
-        [_mapView removeAllPins];
-        for (NSDictionary *task in [_content objectForKey:@"tasks"]){
-            for (NSDictionary *photo in [task objectForKey:@"photos"]){
-                [_mapView addPinAtLocation:[photo objectForKey:@"geolocation"]];
-            }
-        }
-    }
-    
-    return _content;
+    }    
 }
 
 - (NSArray *)tasks {
-    if (self.content){
-        return [self.content objectForKey:@"tasks"];
-    }
-    return nil;
+    return _tasks;
 }
 
 - (void)toggleMap
@@ -115,6 +92,8 @@
     if (!_isParticipant){
         self.tableView.tableHeaderView = _joinHuntView;
     }
+    
+    [self setTasks:[huntInfo objectForKey:@"tasks"]];
 }
 
 - (IBAction)joinHunt:(id)sender

@@ -26,7 +26,6 @@
 - (IBAction)joinHunt:(id)sender;
 
 @property (nonatomic, strong) NSDictionary *huntInfo;
-@property (nonatomic, readonly) NSDictionary *content;
 @property (nonatomic, readonly) NSArray *tasks;
 
 @end

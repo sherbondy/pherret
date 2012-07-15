@@ -23,14 +23,13 @@ static const NSInteger kAvailableHuntsSection = 1;
 
 @implementation PHHuntTableVC
 
-@synthesize content = _content;
-
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         _dateTimer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(updateTimeLeftForVisibleCells) userInfo:nil repeats:YES];
         [[NSRunLoop mainRunLoop] addTimer:_dateTimer forMode:@"NSDefaultRunLoopMode"];
+        [self updateContent];
     }
     return self;
 }
@@ -49,28 +48,17 @@ static const NSInteger kAvailableHuntsSection = 1;
     }
 }
 
-- (NSArray *)content {
-    if (!_content){
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"dummy_hunts" ofType:@"json"];
-        
-        /*
-        NSURL *url = [NSURL URLWithString:filePath];
+- (void)updateContent {
+    if (!_content){        
+        NSURL *url = [NSURL URLWithString:@"http://pherret.azurewebsites.net/api/hunt"];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
         AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
             NSLog(@"Content: %@", JSON);
-            _content = JSON;
+            _content = [JSON objectForKey:@"data"];
+            [self reloadTableView];
         } failure:nil];
         [operation start];
-         */
-        
-        NSData *fileData = [NSData dataWithContentsOfFile:filePath];
-        if (!_decoder) {
-            _decoder = [[JSONDecoder alloc] init];
-        }
-        _content = [[_decoder objectWithData:fileData] objectForKey:@"data"];
     }
-    
-    return _content;
 }
 
 - (NSArray *)huntsForSection:(NSInteger)section
@@ -79,7 +67,7 @@ static const NSInteger kAvailableHuntsSection = 1;
         NSMutableArray *myHunts = [NSMutableArray new];
         NSMutableArray *availableHunts = [NSMutableArray new];
         NSString *username = [PHAppDelegate sharedDelegate].flickrUserName;
-        for (NSDictionary *hunt in self.content){
+        for (NSDictionary *hunt in _content){
             NSArray *participants = [hunt objectForKey:@"participants"];
             if ([PHDataHelpers participants:participants containsUser:username]){
                 [myHunts addObject:hunt];
@@ -104,7 +92,6 @@ static const NSInteger kAvailableHuntsSection = 1;
 
 - (void)reloadTableView
 {
-    _content;
     _myHunts = nil;
     _availableHunts = nil;
     [self.tableView reloadData];

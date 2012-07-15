@@ -16,10 +16,10 @@
     NSArray         *_availableHunts;
     NSDateFormatter *_dateFormatter;
     NSTimer         *_dateTimer;
+    NSArray         *_content;
 }
 
 - (void)reloadTableView;
-
-@property (nonatomic, strong, readonly) NSMutableArray *content;
+- (void)updateContent;
 
 @end
