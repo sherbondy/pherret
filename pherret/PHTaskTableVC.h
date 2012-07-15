@@ -10,6 +10,7 @@
 
 @interface PHTaskTableVC : UITableViewController {
     UIView *_joinHuntView;
+    UIView *_mapView;
 }
 
 - (IBAction)joinHunt:(id)sender;

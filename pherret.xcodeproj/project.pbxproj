@@ -18,6 +18,10 @@
 		3E4056B715B2972E007E8B67 /* PHTaskTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E4056B615B2972E007E8B67 /* PHTaskTableVC.xib */; };
 		3E4056BA15B2998F007E8B67 /* PHLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4056B915B2998F007E8B67 /* PHLoginViewController.m */; };
 		3E4056BC15B29996007E8B67 /* PHLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E4056BB15B29996007E8B67 /* PHLoginViewController.xib */; };
+		3E4056BF15B29CD7007E8B67 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E4056BD15B29CD7007E8B67 /* map.png */; };
+		3E4056C015B29CD7007E8B67 /* map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E4056BE15B29CD7007E8B67 /* map@2x.png */; };
+		3E4056C215B2A14B007E8B67 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E4056C115B2A14B007E8B67 /* icon.png */; };
+		3E4056C415B2A153007E8B67 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E4056C315B2A153007E8B67 /* icon@2x.png */; };
 		3EF2558A15B2251100002259 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558915B2251100002259 /* UIKit.framework */; };
 		3EF2558C15B2251100002259 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558B15B2251100002259 /* Foundation.framework */; };
 		3EF2558E15B2251100002259 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558D15B2251100002259 /* CoreGraphics.framework */; };
@@ -52,6 +56,10 @@
 		3E4056B815B2998F007E8B67 /* PHLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLoginViewController.h; sourceTree = "<group>"; };
 		3E4056B915B2998F007E8B67 /* PHLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLoginViewController.m; sourceTree = "<group>"; };
 		3E4056BB15B29996007E8B67 /* PHLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PHLoginViewController.xib; sourceTree = "<group>"; };
+		3E4056BD15B29CD7007E8B67 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map.png; path = resources/map.png; sourceTree = SOURCE_ROOT; };
+		3E4056BE15B29CD7007E8B67 /* map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "map@2x.png"; path = "resources/map@2x.png"; sourceTree = SOURCE_ROOT; };
+		3E4056C115B2A14B007E8B67 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
+		3E4056C315B2A153007E8B67 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../icon@2x.png"; sourceTree = "<group>"; };
 		3EF2558515B2251100002259 /* pherret.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pherret.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EF2558915B2251100002259 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3EF2558B15B2251100002259 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -105,8 +113,12 @@
 		3E4056A615B27400007E8B67 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				3E4056C315B2A153007E8B67 /* icon@2x.png */,
+				3E4056C115B2A14B007E8B67 /* icon.png */,
 				3E4056A715B2740D007E8B67 /* group.png */,
 				3E4056A815B2740D007E8B67 /* group@2x.png */,
+				3E4056BD15B29CD7007E8B67 /* map.png */,
+				3E4056BE15B29CD7007E8B67 /* map@2x.png */,
 			);
 			name = resources;
 			sourceTree = "<group>";
@@ -292,6 +304,10 @@
 				3E4056B015B28165007E8B67 /* PHHuntCellView.xib in Resources */,
 				3E4056B715B2972E007E8B67 /* PHTaskTableVC.xib in Resources */,
 				3E4056BC15B29996007E8B67 /* PHLoginViewController.xib in Resources */,
+				3E4056BF15B29CD7007E8B67 /* map.png in Resources */,
+				3E4056C015B29CD7007E8B67 /* map@2x.png in Resources */,
+				3E4056C215B2A14B007E8B67 /* icon.png in Resources */,
+				3E4056C415B2A153007E8B67 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

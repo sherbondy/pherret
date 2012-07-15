@@ -23,6 +23,9 @@
     if (self) {
         NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"PHTaskTableVC" owner:self options:nil];
         _joinHuntView = [nibs objectAtIndex:0];
+        
+        _mapView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        _mapView.backgroundColor = [UIColor blackColor];
     }
     return self;
 }
@@ -31,7 +34,7 @@
 {
     [super viewDidLoad];
 
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"map"] style:UIBarButtonItemStyleBordered target:self action:@selector(toggleMap)];
 }
 
 - (void)viewDidUnload
@@ -39,6 +42,13 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+
+- (void)toggleMap
+{
+    [UIView transitionFromView:self.tableView toView:_mapView duration:1.0 options:UIViewAnimationCurveEaseInOut completion:^(BOOL finished){
+        
+    }];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
