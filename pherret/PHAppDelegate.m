@@ -37,7 +37,7 @@ static NSString *kCheckTokenStep                    = @"kCheckTokenStep";
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    UIViewController       *rootVC        = [[RootViewController alloc] initWithNibName:nil bundle:nil];
+    UIViewController *rootVC = [[RootViewController alloc] initWithNibName:nil bundle:nil];
     _navController = [[UINavigationController alloc] initWithRootViewController:rootVC];
 
     self.window.rootViewController = _navController;

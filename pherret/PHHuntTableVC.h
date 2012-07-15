@@ -12,7 +12,11 @@
 
 @interface PHHuntTableVC : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
     JSONDecoder *_decoder;
+    NSArray     *_myHunts;
+    NSArray     *_availableHunts;
 }
+
+- (void)reloadTableView;
 
 @property (nonatomic, strong, readonly) NSArray *content;
 

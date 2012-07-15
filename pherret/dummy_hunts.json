@@ -1,8 +1,8 @@
 {
     "content":[
                {"name":"Hunt 1", "location":"A place1", "endDate":1342312674, "participants": ["bob", "jim", "tim"]},
-               {"name":"Hunt 2", "location":"A place2", "endDate":1342312654, "participants": ["bob", "jim", "tim"]},
+               {"name":"Hunt 2", "location":"A place2", "endDate":1342312654, "participants": ["bob", "jim", "sherbonbon"]},
                {"name":"Hunt 3", "location":"A place3", "endDate":1342312644, "participants": ["bob", "jim", "tim"]},
-               {"name":"Hunt 4", "location":"A place4", "endDate":1342312634, "participants": ["bob", "jim", "tim"]}
+               {"name":"Hunt 4", "location":"A place4", "endDate":1342312634, "participants": ["bob", "jim", "sherbonbon"]}
     ]
 }

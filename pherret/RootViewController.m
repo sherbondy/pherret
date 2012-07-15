@@ -33,28 +33,15 @@ static NSString *kUploadImageStep        = @"kUploadImageStep";
         self.title = @"Pick a Hunt!";
         self.huntTableVC = [[PHHuntTableVC alloc] initWithStyle:UITableViewStylePlain];
         self.view = self.huntTableVC.tableView;
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginStatusChanged:) name:PHShouldUpdateAuthInfoNotification object:nil];
-    
-    if (!_loginVC){
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginStatusChanged:) name:PHShouldUpdateAuthInfoNotification object:nil];
+        
         _loginVC = [[PHLoginViewController alloc] initWithNibName:nil bundle:nil];
         _loginVC.delegate = self;
+        
+        [self loginStatusChanged:nil];
     }
-    
-    [self loginStatusChanged:nil];
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-
+    return self;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -105,6 +92,7 @@ static NSString *kUploadImageStep        = @"kUploadImageStep";
         NSLog(@"Login status changed: %@", [PHAppDelegate sharedDelegate].flickrUserName);
         [_loginVC hide];
         self.navigationController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStyleBordered target:self action:@selector(logout)];
+        [self.huntTableVC reloadTableView];
     }
 }
 

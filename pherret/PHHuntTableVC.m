@@ -7,8 +7,12 @@
 //
 
 #import "PHHuntTableVC.h"
+#import "PHAppDelegate.h"
 #import <AFNetworking/AFnetworking.h>
 #import <JSONKit/JSONKit.h>
+
+static const NSInteger kMyHuntsSection = 0;
+static const NSInteger kAvailableHuntsSection = 1;
 
 @interface PHHuntTableVC ()
 
@@ -70,9 +74,42 @@
         }
         _content = [[_decoder objectWithData:fileData] objectForKey:@"content"];
     }
-    NSLog(@"%@", _content);
     
     return _content;
+}
+
+- (NSArray *)huntsForSection:(NSInteger)section
+{
+    if (!_myHunts){
+        NSMutableArray *myHunts = [NSMutableArray new];
+        NSMutableArray *availableHunts = [NSMutableArray new];
+        for (NSDictionary *hunt in self.content){
+            if ([[hunt objectForKey:@"participants"] containsObject:[PHAppDelegate sharedDelegate].flickrUserName]){
+                [myHunts addObject:hunt];
+            } else {
+                [availableHunts addObject:hunt];
+            }
+        }
+        
+        _myHunts = myHunts;
+        _availableHunts = availableHunts;
+    }
+    
+    switch (section) {
+        case kMyHuntsSection:
+            return _myHunts;
+        case kAvailableHuntsSection:
+            return _availableHunts;
+        default:
+            return nil;
+    }
+}
+
+- (void)reloadTableView
+{
+    _myHunts = nil;
+    _availableHunts = nil;
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -80,14 +117,24 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return 2;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    switch (section) {
+        case kMyHuntsSection:
+            return @"My Hunts";
+        case kAvailableHuntsSection:
+            return @"Available Hunts";
+        default:
+            return nil;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSLog(@"%d", self.content.count);
-    return self.content.count;
+    return [self huntsForSection:section].count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -98,7 +145,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    NSDictionary *item = [self.content objectAtIndex:indexPath.row];
+    NSDictionary *item = [[self huntsForSection:indexPath.section] objectAtIndex:indexPath.row];
     // Configure the cell...
     cell.textLabel.text = [item objectForKey:@"name"];
     cell.detailTextLabel.text = [item objectForKey:@"location"];
