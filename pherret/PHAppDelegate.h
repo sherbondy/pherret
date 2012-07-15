@@ -15,10 +15,9 @@ static NSString *PHCallbackURLBaseString            = @"pherret://auth";
 @class OFFlickrAPIRequest;
 @protocol OFFlickrAPIRequestDelegate;
 
-@interface PHAppDelegate : UIResponder <UIApplicationDelegate, OFFlickrAPIRequestDelegate> {
+@interface PHAppDelegate : UIResponder <UIApplicationDelegate, OFFlickrAPIRequestDelegate, UINavigationControllerDelegate> {
     OFFlickrAPIContext *_flickrContext;
 	OFFlickrAPIRequest *_flickrRequest;
-    UINavigationController *_navController;
 }
 
 + (PHAppDelegate *)sharedDelegate;
@@ -29,5 +28,6 @@ static NSString *PHCallbackURLBaseString            = @"pherret://auth";
 @property (nonatomic, readonly) OFFlickrAPIContext *flickrContext;
 @property (nonatomic, retain)   NSString *flickrUserName;
 @property (nonatomic, readonly) BOOL isLoggedIn;
+@property (nonatomic, readonly) UINavigationController *navController;
 
 @end

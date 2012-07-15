@@ -31,7 +31,7 @@ static NSString *kUploadImageStep        = @"kUploadImageStep";
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = @"Pick a Hunt!";
-        self.huntTableVC = [[PHHuntTableVC alloc] initWithStyle:UITableViewStylePlain];
+        _huntTableVC = [[PHHuntTableVC alloc] initWithStyle:UITableViewStylePlain];
         self.view = self.huntTableVC.tableView;
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginStatusChanged:) name:PHShouldUpdateAuthInfoNotification object:nil];

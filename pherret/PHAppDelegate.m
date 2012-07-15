@@ -24,6 +24,7 @@ static NSString *kCheckTokenStep                    = @"kCheckTokenStep";
 @implementation PHAppDelegate
 
 @synthesize flickrUserName = _flickrUserName;
+@synthesize navController = _navController;
 
 + (PHAppDelegate *)sharedDelegate
 {
@@ -39,10 +40,11 @@ static NSString *kCheckTokenStep                    = @"kCheckTokenStep";
     
     UIViewController *rootVC = [[RootViewController alloc] initWithNibName:nil bundle:nil];
     _navController = [[UINavigationController alloc] initWithRootViewController:rootVC];
+    _navController.delegate = self;
 
     self.window.rootViewController = _navController;
     
-    _navController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:nil action:nil];
+    self.navController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:nil action:nil];
         
     if ([self.flickrContext.OAuthToken length]) {
 		[self flickrRequest].sessionInfo = kCheckTokenStep;
@@ -162,6 +164,13 @@ static NSString *kCheckTokenStep                    = @"kCheckTokenStep";
 	[[[UIAlertView alloc] initWithTitle:@"Could not connect to Flickr" message:[inError description]
                                delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil] show];
 	[[NSNotificationCenter defaultCenter] postNotificationName:PHShouldUpdateAuthInfoNotification object:self];
+}
+
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if ([viewController.view isKindOfClass:[UITableView class]]){
+        UITableView *tableView = (UITableView *)viewController.view;
+        [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
+    }
 }
 
 @end

@@ -14,7 +14,7 @@
 @protocol OFFlickrAPIRequestDelegate;
 @protocol FlickrLoginProtocol;
 
-@interface RootViewController : UIViewController <OFFlickrAPIRequestDelegate, FlickrLoginProtocol> {
+@interface RootViewController : UIViewController <OFFlickrAPIRequestDelegate, FlickrLoginProtocol, UITableViewDataSource> {
     PHLoginViewController *_loginVC;
 }
 

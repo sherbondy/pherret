@@ -32,24 +32,6 @@ static const NSInteger kAvailableHuntsSection = 1;
     return self;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -188,6 +170,9 @@ static const NSInteger kAvailableHuntsSection = 1;
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    UIViewController *fakeVC = [[UIViewController alloc] init];
+    fakeVC.title = @"Testing";
+    [[PHAppDelegate sharedDelegate].navController pushViewController:fakeVC animated:YES];
 }
 
 @end
