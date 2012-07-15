@@ -8,6 +8,7 @@
 
 #import "PHTaskTableVC.h"
 #import "PHAppDelegate.h"
+#import "PHMapView.h"
 
 @interface PHTaskTableVC ()
 
@@ -24,8 +25,7 @@
         NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"PHTaskTableVC" owner:self options:nil];
         _joinHuntView = [nibs objectAtIndex:0];
         
-        _mapView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-        _mapView.backgroundColor = [UIColor blackColor];
+        _mapView = [[PHMapView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     }
     return self;
 }
@@ -44,16 +44,18 @@
     // e.g. self.myOutlet = nil;
 }
 
-- (void)toggleMap
-{
-    [UIView transitionFromView:self.tableView toView:_mapView duration:1.0 options:UIViewAnimationCurveEaseInOut completion:^(BOOL finished){
-        
-    }];
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)toggleMap
+{
+    UIView *viewOne = _isTableViewHidden ? _mapView : self.tableView;
+    UIView *viewTwo = _isTableViewHidden ? self.tableView : _mapView;
+    [UIView transitionFromView:viewOne toView:viewTwo duration:0.4 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished){
+        _isTableViewHidden = !_isTableViewHidden;
+    }];
 }
 
 - (void)setHuntInfo:(NSDictionary *)huntInfo
@@ -68,6 +70,13 @@
 - (IBAction)joinHunt:(id)sender
 {
     NSLog(@"Make the request to join the hunt!");
+    // api call goes here
+    
+    [UIView animateWithDuration:0.4 animations:^{
+        self.tableView.tableHeaderView.transform = CGAffineTransformMakeScale(1, 0.001);
+    } completion:^(BOOL isComplete){
+        self.tableView.tableHeaderView = nil;
+    }];
 }
 
 #pragma mark - Table view data source

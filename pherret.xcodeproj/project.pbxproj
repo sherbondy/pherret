@@ -22,6 +22,8 @@
 		3E4056C015B29CD7007E8B67 /* map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E4056BE15B29CD7007E8B67 /* map@2x.png */; };
 		3E4056C215B2A14B007E8B67 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E4056C115B2A14B007E8B67 /* icon.png */; };
 		3E4056C415B2A153007E8B67 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E4056C315B2A153007E8B67 /* icon@2x.png */; };
+		3E4056C715B2A4E5007E8B67 /* PHMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4056C615B2A4E5007E8B67 /* PHMapView.m */; };
+		3ED0402815B2A58F00E888CE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED0402715B2A58F00E888CE /* MapKit.framework */; };
 		3EF2558A15B2251100002259 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558915B2251100002259 /* UIKit.framework */; };
 		3EF2558C15B2251100002259 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558B15B2251100002259 /* Foundation.framework */; };
 		3EF2558E15B2251100002259 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2558D15B2251100002259 /* CoreGraphics.framework */; };
@@ -60,6 +62,9 @@
 		3E4056BE15B29CD7007E8B67 /* map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "map@2x.png"; path = "resources/map@2x.png"; sourceTree = SOURCE_ROOT; };
 		3E4056C115B2A14B007E8B67 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
 		3E4056C315B2A153007E8B67 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../icon@2x.png"; sourceTree = "<group>"; };
+		3E4056C515B2A4E5007E8B67 /* PHMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHMapView.h; sourceTree = "<group>"; };
+		3E4056C615B2A4E5007E8B67 /* PHMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHMapView.m; sourceTree = "<group>"; };
+		3ED0402715B2A58F00E888CE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3EF2558515B2251100002259 /* pherret.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pherret.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EF2558915B2251100002259 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3EF2558B15B2251100002259 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -93,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ED0402815B2A58F00E888CE /* MapKit.framework in Frameworks */,
 				3EFD3D4B15B2302A00B28496 /* CoreData.framework in Frameworks */,
 				3EFD3D4915B2302500B28496 /* libsqlite3.0.dylib in Frameworks */,
 				3EFD3D4715B2301C00B28496 /* libz.1.2.5.dylib in Frameworks */,
@@ -144,6 +150,7 @@
 		3EF2558815B2251100002259 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3ED0402715B2A58F00E888CE /* MapKit.framework */,
 				3EFD3D4C15B230FF00B28496 /* libAviarySDK.a */,
 				3EFD3D4815B2302500B28496 /* libsqlite3.0.dylib */,
 				3EFD3D4615B2301C00B28496 /* libz.1.2.5.dylib */,
@@ -172,6 +179,8 @@
 				3E40568715B238E3007E8B67 /* RootViewController.m */,
 				3E4056B115B29342007E8B67 /* PHTaskTableVC.h */,
 				3E4056B215B29342007E8B67 /* PHTaskTableVC.m */,
+				3E4056C515B2A4E5007E8B67 /* PHMapView.h */,
+				3E4056C615B2A4E5007E8B67 /* PHMapView.m */,
 				3E4056B815B2998F007E8B67 /* PHLoginViewController.h */,
 				3E4056B915B2998F007E8B67 /* PHLoginViewController.m */,
 				3E4056AC15B27945007E8B67 /* PHHuntCell.h */,
@@ -342,6 +351,7 @@
 				3E4056AE15B27946007E8B67 /* PHHuntCell.m in Sources */,
 				3E4056B315B29342007E8B67 /* PHTaskTableVC.m in Sources */,
 				3E4056BA15B2998F007E8B67 /* PHLoginViewController.m in Sources */,
+				3E4056C715B2A4E5007E8B67 /* PHMapView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

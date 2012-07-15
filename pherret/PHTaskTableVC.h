@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class PHMapView;
+
 @interface PHTaskTableVC : UITableViewController {
     UIView *_joinHuntView;
-    UIView *_mapView;
+    PHMapView *_mapView;
+    BOOL    _isTableViewHidden;
 }
 
 - (IBAction)joinHunt:(id)sender;
